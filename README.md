@@ -1,14 +1,16 @@
-# Project Name:
-Restaurant Ordering System
-# team members
+# React + Vite
 
-# Project Domain:
-Food & Hospitality
-# Project Brief Description:
-The Restaurant Ordering System is a web-based application designed to simplify restaurant operations by managing menus, customer orders, table reservations, billing, and payment records. It provides restaurant staff with an efficient platform for handling daily operations while allowing customers to browse menus and place orders seamlessly. Sprint 3.pdfPDF
-# Technology Stack:
-MERN Stack:
-MongoDB – Database
-Express.js – Backend Framework
-React.js – Frontend Library
-Node.js – Server-side Runtime
+This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+
+Currently, two official plugins are available:
+
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+
+## React Compiler
+
+The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+
+## Expanding the Oxlint configuration
+
+If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
