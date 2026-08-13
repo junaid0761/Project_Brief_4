@@ -1,10 +1,7 @@
+import MainLayout from "./layouts/MainLayout";
+
 function App() {
-  return (
-    <div>
-      <h1>Restaurant Ordering System</h1>
-      <p>Frontend is working successfully.</p>
-    </div>
-  );
+  return <MainLayout />;
 }
 
 export default App;
