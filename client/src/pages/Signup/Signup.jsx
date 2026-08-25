@@ -1,32 +1,44 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-function Login() {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+function Signup() {
   const navigate = useNavigate();
 
- const handleLogin = (e) => {
-  e.preventDefault();
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
 
-  if (!email || !password) {
-    alert("Please enter email and password.");
-    return;
-  }
+  const handleSignup = (e) => {
+    e.preventDefault();
 
-  alert("Login successful!");
-  navigate("/");
-};
+    if (!name || !email || !password) {
+      alert("Please fill all fields.");
+      return;
+    }
+
+    alert("Account created successfully!");
+    navigate("/login");
+  };
 
   return (
     <div className="login-page">
       <div className="login-card">
         <div className="login-icon">🍽️</div>
 
-        <h1>Welcome Back</h1>
-        <p>Login to continue to RestaurantHub</p>
+        <h1>Create Account</h1>
+        <p>Sign up to get started with RestaurantHub</p>
 
-        <form onSubmit={handleLogin}>
+        <form onSubmit={handleSignup}>
+          <div className="login-field">
+            <label>Full Name</label>
+            <input
+              type="text"
+              placeholder="Enter your name"
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+            />
+          </div>
+
           <div className="login-field">
             <label>Email Address</label>
             <input
@@ -41,29 +53,29 @@ function Login() {
             <label>Password</label>
             <input
               type="password"
-              placeholder="Enter your password"
+              placeholder="Create a password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
             />
           </div>
 
           <button type="submit" className="login-submit">
-            Login
+            Sign Up
           </button>
         </form>
 
         <p className="login-footer">
-           Don't have an account?{" "}
+          Already have an account?{" "}
           <span
-          onClick={() => navigate("/signup")}
-          style={{ cursor: "pointer" }}
-      >
-        Sign Up
-  </span>
-</p>
+            onClick={() => navigate("/login")}
+            style={{ cursor: "pointer" }}
+          >
+            Login
+          </span>
+        </p>
       </div>
     </div>
   );
 }
 
-export default Login;
+export default Signup;
