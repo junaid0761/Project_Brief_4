@@ -973,3 +973,74 @@ button {
 .navbar > a:last-child {
   text-decoration: none;
 }
+/* 404 Not Found Page */
+
+.not-found-page {
+  min-height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+  background: #fffaf5;
+}
+
+.not-found-card {
+  width: 100%;
+  max-width: 600px;
+  text-align: center;
+  background: #ffffff;
+  padding: 55px 40px;
+  border-radius: 20px;
+  border: 1px solid #f0e2d5;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.not-found-icon {
+  width: 90px;
+  height: 90px;
+  margin: 0 auto 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #fff1e6;
+  border-radius: 50%;
+  font-size: 42px;
+}
+
+.not-found-card h1 {
+  margin: 0;
+  font-size: 80px;
+  line-height: 1;
+  color: #ed6c18;
+  font-weight: 800;
+}
+
+.not-found-card h2 {
+  margin: 15px 0 10px;
+  font-size: 28px;
+  color: #111827;
+}
+
+.not-found-card p {
+  margin: 0 auto 30px;
+  max-width: 450px;
+  color: #64748b;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.not-found-home-btn {
+  display: inline-block;
+  padding: 13px 28px;
+  background: #ed6c18;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: 0.2s ease;
+}
+
+.not-found-home-btn:hover {
+  background: #d95f10;
+  transform: translateY(-2px);
+}
