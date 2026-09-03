@@ -1,5 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import PageTitle from "../../components/ui/PageTitle";
+import Button from "../../components/ui/Button";
 
 function Login() {
   const [email, setEmail] = useState("");
@@ -23,8 +25,12 @@ function Login() {
       <div className="login-card">
         <div className="login-icon">🍽️</div>
 
-        <h1>Welcome Back</h1>
-        <p>Login to continue to RestaurantHub</p>
+        <PageTitle
+  title="Welcome Back"
+  subtitle="Login to continue to RestaurantHub"
+/>
+
+        
 
         <form onSubmit={handleLogin}>
           <div className="login-field">
@@ -47,9 +53,9 @@ function Login() {
             />
           </div>
 
-          <button type="submit" className="login-submit">
-            Login
-          </button>
+          <Button type="submit" className="login-submit">
+  Login
+</Button>
         </form>
 
         <p className="login-footer">

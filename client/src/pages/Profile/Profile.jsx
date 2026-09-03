@@ -1,4 +1,7 @@
 import { useState } from "react";
+import PageTitle from "../../components/ui/PageTitle";
+import Button from "../../components/ui/Button";
+import Card from "../../components/ui/Card";
 
 function Profile() {
   const [isEditing, setIsEditing] = useState(false);
@@ -24,15 +27,20 @@ function Profile() {
 
   return (
     <div className="profile-page">
+
+      {/* Profile Header */}
       <section className="profile-header">
         <div className="profile-avatar">👤</div>
 
-        <h1>My Profile</h1>
-
-        <p>Manage your account information.</p>
+        <PageTitle
+          title="My Profile"
+          subtitle="Manage your account information."
+        />
       </section>
 
-      <section className="profile-card">
+      {/* Profile Information */}
+      <Card className="profile-card">
+
         <div className="profile-info">
           <label>Full Name</label>
 
@@ -81,30 +89,33 @@ function Profile() {
         </div>
 
         {!isEditing ? (
-          <button
+          <Button
             className="edit-profile-btn"
             onClick={() => setIsEditing(true)}
           >
             Edit Profile
-          </button>
+          </Button>
         ) : (
           <div className="profile-buttons">
-            <button
+
+            <Button
               className="save-profile-btn"
               onClick={handleSave}
             >
               Save Changes
-            </button>
+            </Button>
 
-            <button
+            <Button
               className="cancel-profile-btn"
               onClick={() => setIsEditing(false)}
             >
               Cancel
-            </button>
+            </Button>
+
           </div>
         )}
-      </section>
+
+      </Card>
     </div>
   );
 }

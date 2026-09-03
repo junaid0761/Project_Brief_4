@@ -1,3 +1,7 @@
+import PageTitle from "../../components/ui/PageTitle";
+import Button from "../../components/ui/Button";
+import Card from "../../components/ui/Card";
+
 function Home() {
   return (
     <div className="home-page">
@@ -19,13 +23,13 @@ function Home() {
           </p>
 
           <div className="hero-buttons">
-            <button className="primary-btn">
+            <Button className="primary-btn">
               Order Now
-            </button>
+            </Button>
 
-            <button className="secondary-btn">
+            <Button className="secondary-btn">
               Explore Menu
-            </button>
+            </Button>
           </div>
         </div>
 
@@ -36,28 +40,33 @@ function Home() {
 
       {/* Categories */}
       <section className="categories-section">
-        <h2>What are you craving?</h2>
+        <PageTitle
+          title="What are you craving?"
+          subtitle="Choose your favourite food category"
+        />
 
         <div className="category-grid">
-          <div className="category-card">
+
+          <Card className="category-card">
             🍕
             <h3>Pizza</h3>
-          </div>
+          </Card>
 
-          <div className="category-card">
+          <Card className="category-card">
             🍔
             <h3>Burgers</h3>
-          </div>
+          </Card>
 
-          <div className="category-card">
+          <Card className="category-card">
             🍜
             <h3>Noodles</h3>
-          </div>
+          </Card>
 
-          <div className="category-card">
+          <Card className="category-card">
             🍰
             <h3>Desserts</h3>
-          </div>
+          </Card>
+
         </div>
       </section>
 

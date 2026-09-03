@@ -1,4 +1,7 @@
 import { useState } from "react";
+import PageTitle from "../../components/ui/PageTitle";
+import Button from "../../components/ui/Button";
+import Card from "../../components/ui/Card";
 
 function Orders() {
   const [quantity, setQuantity] = useState(2);
@@ -25,15 +28,21 @@ function Orders() {
 
   return (
     <div className="orders-page">
+
+      {/* Orders Header */}
       <section className="orders-header">
-        <h1>My Orders</h1>
-        <p>Review your selected items before placing your order.</p>
+        <PageTitle
+          title="My Orders"
+          subtitle="Review your selected items before placing your order."
+        />
       </section>
 
+      {/* Orders Content */}
       <section className="orders-content">
 
         {quantity > 0 ? (
-          <div className="order-item">
+          <Card className="order-item">
+
             <div className="order-image">🍔</div>
 
             <div className="order-details">
@@ -60,7 +69,8 @@ function Orders() {
             >
               Remove
             </button>
-          </div>
+
+          </Card>
         ) : (
           <div className="empty-orders">
             <h2>Your cart is empty</h2>
@@ -68,6 +78,7 @@ function Orders() {
           </div>
         )}
 
+        {/* Order Summary */}
         {quantity > 0 && (
           <div className="order-summary">
             <h2>Order Summary</h2>
@@ -92,9 +103,9 @@ function Orders() {
               <strong>₹{total}</strong>
             </div>
 
-            <button className="checkout-btn">
+            <Button className="checkout-btn">
               Proceed to Checkout
-            </button>
+            </Button>
           </div>
         )}
 

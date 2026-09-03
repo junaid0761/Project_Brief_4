@@ -1,7 +1,9 @@
 function Footer() {
+  const year = new Date().getFullYear();
+
   return (
-    <footer>
-      <p>© 2026 Restaurant Ordering System</p>
+    <footer className="footer">
+      <p>© {year} RestaurantHub. All rights reserved.</p>
     </footer>
   );
 }
